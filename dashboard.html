@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Strength Prediction - Dashboard</title>
+    <link rel="stylesheet" href="rambabu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Material Strength Prediction</div>
+            <ul class="nav-links">
+                <li><a href="rambabu.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="author.html">Author</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard" id="interface-2">
+            <h2>Material Selection Prediction</h2>
+            <div class="input-section">
+                <h3>Material Requirements</h3>
+                <form id="material-form" onsubmit="return false;">
+                    <!-- Industry Selection -->
+                    <div class="input-group">
+                        <label for="industry">Industry:</label>
+                        <select id="industry" name="industry" required>
+                            <option value="">Select Industry</option>
+                            <option value="aerospace">Aerospace</option>
+                            <option value="automotive">Automotive</option>
+                            <option value="construction">Construction</option>
+                            <option value="biomedical">Biomedical</option>
+                        </select>
+                    </div>
+
+                    <!-- Material Properties Input -->
+                    <div class="input-group">
+                        <label for="material">Material:</label>
+                        <input type="text" id="material" name="material" placeholder="Enter Material" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="su">Ultimate Strength (Su):</label>
+                        <input type="number" id="su" name="su" placeholder="Enter Ultimate Strength" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="sy">Yield Strength (Sy):</label>
+                        <input type="number" id="sy" name="sy" placeholder="Enter Yield Strength" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="e">Elastic Limit:</label>
+                        <input type="number" id="e" name="e" placeholder="Enter Elastic Limit" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="g">Modulus of Rigidity:</label>
+                        <input type="number" id="g" name="g" placeholder="Enter Modulus of Rigidity" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="mu">Mu Coefficient:</label>
+                        <input type="number" step="0.01" id="mu" name="mu" placeholder="Enter Mu Coefficient" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="ro">Ro:</label>
+                        <input type="number" id="ro" name="ro" placeholder="Enter Ro" required>
+                    </div>
+
+                    <!-- Custom Parameter Input -->
+                    <div class="input-group">
+                        <label for="custom-parameter">Custom Parameter:</label>
+                        <input type="text" id="custom-parameter" name="custom-parameter" placeholder="e.g., Cost">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" onclick="predict()">Predict Material</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="interface-3" class="prediction-interface" style="display:none;">
+            <h2>Prediction Result</h2>
+            <div id="prediction-content">
+                <div id="result" class="rating-stars"></div>
+                <p id="recommendation"></p>
+                <div class="alternative-materials">
+                    <h4>Recommendations</h4>
+                    <ul id="alternative-list"></ul>
+                </div>
+            </div>
+            <button class="download-button" onclick="downloadReport()">Download Report</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Material Strength Prediction</p>
+    </footer>
+
+    <script src="rambabu.js"></script>
+</body>
+</html>

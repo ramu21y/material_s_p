@@ -1,0 +1,402 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Header and Navigation */
+  header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ddd;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  section h2 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Input Section */
+  .input-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .input-group input[type="number"],
+  .input-group input[type="text"],
+  .input-group select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    color: #555;
+  }
+  
+  .input-group input[type="number"]:focus,
+  .input-group input[type="text"]:focus,
+  .input-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+  }
+  
+  .dashboard button {
+    background-color: #27ae60;
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+  }
+  
+  .dashboard button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+  }
+  
+  /* Prediction Interface */
+  .prediction-interface {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    width: 100%;
+  }
+  
+  .prediction-interface h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #3498db;
+    border-bottom: 3px solid #ecf0f1;
+    padding-bottom: 12px;
+  }
+  
+  .rating-stars {
+    font-size: 3em;
+    color: #f39c12;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  #recommendation {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 25px;
+    line-height: 1.7;
+  }
+  
+  .alternative-materials {
+    margin-top: 40px;
+  }
+  
+  .alternative-materials h4 {
+    font-size: 1.7em;
+    margin-bottom: 15px;
+    color: #3498db;
+  }
+  
+  .alternative-materials ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .alternative-materials li {
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .download-button {
+    background-color: #3498db;
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  
+  .download-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  /* Author and Contact page styles - LinkedIn style */
+  .contact-linkedin,
+  .author-linkedin {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+  }
+  
+  .author-linkedin .profile-header,
+  .contact-linkedin .form-group,
+  .contact-linkedin .contact-info {
+    margin-bottom: 20px;
+  }
+  
+  .author-linkedin h1,
+  .contact-linkedin h2 {
+    color: #3498db;
+    font-size: 2em;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .author-linkedin h2,
+  .contact-linkedin h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #3498db;
+  }
+  
+  .author-linkedin .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .author-linkedin p {
+    color: #555;
+    line-height: 1.7;
+  }
+  
+  /* LinkedIn-Style Profile Links */
+  .author-linkedin .profile-links {
+    margin-top: 30px;
+  }
+  
+  .author-linkedin .profile-links a {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    margin-right: 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .author-linkedin .profile-links a:hover {
+    background-color: #2980b9;
+  }
+  
+  .author-linkedin .profile-links i {
+    margin-right: 8px;
+  }
+  
+  .author-linkedin .profile-skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .author-linkedin .profile-skills li {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  /* Contact Form Inputs */
+  .contact-linkedin input,
+  .contact-linkedin textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .contact-linkedin input:focus,
+  .contact-linkedin textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+  }
+  /* Footer */
+  footer {
+      background: linear-gradient(to right, #37474f, #263238); /* Gradient Background */
+      color: white;
+      text-align: center;
+      padding: 30px 20px; /* Increased Padding */
+      margin-top: 30px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
+      font-family: 'Arial', sans-serif; /* Different Font */
+      font-size: 1.1em; /* Slightly larger font */
+      letter-spacing: 0.5px; /* Improved Text Spacing */
+      border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle Border */
+  }
+  
+  footer p {
+      margin-bottom: 10px; /* Spacing for the text */
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      nav {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+  
+      .nav-links {
+          margin-top: 10px;
+          flex-direction: column;
+      }
+  
+      .nav-links li {
+          margin-left: 0;
+          margin-bottom: 8px;
+      }
+  
+      .author-linkedin .profile-image {
+          width: 150px;
+          height: 150px;
+      }
+  
+      .author-linkedin .profile-summary,
+      .author-linkedin .profile-skills {
+          margin-bottom: 20px;
+      }
+  }
+  /* General Styles (unchanged) */
+
+/* Header & Navigation (unchanged) */
+
+/* Main Content (unchanged) */
+
+/* Home Page Styles */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+.cta-button i {
+  margin-left: 5px; /* Style the new icon here */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.cta-button:hover i {
+  transform: translateX(5px);
+}
